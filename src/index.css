@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans JP", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Noto Sans JP", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-accent-50: #eff6ff;
+  --color-accent-100: #dbeafe;
+  --color-accent-400: #60a5fa;
+  --color-accent-500: #3b82f6;
+  --color-accent-600: #2563eb;
+  --color-accent-700: #1d4ed8;
+
+  --animate-blink: blink 1s step-end infinite;
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-zinc-800 antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
